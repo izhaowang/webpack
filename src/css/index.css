@@ -1,0 +1,122 @@
+body{
+    padding:0;
+    margin:0;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:100vw;
+    height:100vh;
+    margin: 0 auto;
+    background: rgba(0,0,0,.4);
+}
+.song-picture,.song-describe,.time,.control{
+    margin: 0 auto;
+}
+.song-picture{
+    width:150px;
+    height: 150px;
+    border: 20px solid black;
+    border-radius: 50%;
+    background:url(2.jpg); 
+    background-repeat: no-repeat;
+    background-size:180px 180px;
+}
+.move{
+    animation: move 10s infinite
+}
+@keyframes move{
+    0%{
+        transform: rotateZ(0)
+    }
+    100% {
+        transform: rotateZ(360deg)
+    }
+
+}
+.song-describe h3,h4{
+    text-align: center;
+    color:#fff;
+}
+.time{
+    width:300px;
+    position: relative;
+    /* border: 1px solid red; */
+    height:50px;
+}
+.time .current-time,.all-time,.progress,.current-pro,.pro{
+    position: absolute;
+    top:15px;
+}
+.current-time{
+    left:0;
+}
+.all-time{
+    right:0;
+}
+.progress{
+    width:205px;
+    border:1px solid black;
+    left:46px;
+    top:27px;
+    cursor: pointer;
+}
+.current-pro{
+    width:1px;
+    border: 3px solid rgba(255,255,255,0.8);
+    border-radius: 50%;
+    left:45px;
+    top:25px;
+    cursor:pointer;
+}
+.pro{
+    left:46px;
+    top:27px;
+    width:1px;
+    height:2px;
+    background: #fff
+}
+.control{
+    display: flex;
+    width: 100vw;
+    height:50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,.2);
+    margin-top: 50px;
+}
+.control .btn-wrap{
+    width:10%;
+    height:80%;
+    background-size: 20px 20px;
+    background-position: 20%;
+    background-repeat: no-repeat;
+}
+.like-btn{
+    background-image: url(../img/icon-like.png);
+}
+.like-btn.liked{
+    background-image: url(../img/icon-like-solid.png);
+}
+.prev-btn{
+    background-image: url(../img/icon-prev.png);
+}
+.play-btn{
+    background-image: url(../img/icon-play.png);
+}
+.pause-btn{
+    background-image: url(../img/icon-pause.png);
+    display: none;
+}
+.next-btn{
+    background-image: url(../img/icon-next.png);
+ 
+}
+.list-btn{
+    background-image: url(../img/icon-playlist.png);
+}
+
+
+
